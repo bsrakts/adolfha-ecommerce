@@ -22,8 +22,10 @@ export const GlobalProvider = (props) => {
     fetchProductsData()
   }, []);
 
+  console.log(products, "products")
+
   return (
-    <GlobalState.Provider>
+    <GlobalState.Provider value={products}>
     {props.children}
   </GlobalState.Provider>
   )

@@ -1,0 +1,24 @@
+.appBar{
+  background-color: #18181c !important;
+}
+
+
+@media only screen and (max-width:960px){
+  .mobileMenu{
+  display:block;
+}
+  .menu{
+  display:none;
+}
+}
+
+@media only screen and (min-width:960px){
+  .menu{
+  display:flex;
+  justify-content: end;
+}
+
+.mobileMenu{
+  display:none;
+}
+}

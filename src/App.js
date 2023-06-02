@@ -1,11 +1,15 @@
 
 import './App.css';
+import Navbar from './components/navbar';
+import { GlobalProvider } from './contexts/globalState';
 
 function App() {
   return (
-    <div className="App">
-      hello
+    <GlobalProvider>
+      <div className="App">
+      <Navbar/>
     </div>
+    </GlobalProvider>
   );
 }
 
