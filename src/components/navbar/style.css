@@ -1,9 +1,14 @@
 .appBar{
   background-color: #18181c !important;
+  margin-bottom: 5rem;
 }
 
 
 @media only screen and (max-width:960px){
+  .appBar{
+    margin-bottom: 2rem;
+  }
+
   .mobileMenu{
   display:block;
 }

@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <AppBar position="sticky" className='appBar'>
+      <AppBar position='sticky' className='appBar'>
         <Toolbar>
           {logo}
           <div style={{ marginLeft: 'auto' }}>
