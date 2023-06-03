@@ -2,8 +2,11 @@
 import { Badge, Card, CardContent, Typography } from '@mui/material'
 import React from 'react'
 import './style.css'
+import CurrencyFormat from 'react-currency-format';
 
 const ProductCard = ({ productData }) => {
+
+  let options = { format: '%s&v', symbol: '£'}
 
   return (
     <div className='cardContainer'>
@@ -21,7 +24,12 @@ const ProductCard = ({ productData }) => {
           </Typography>
           <Typography variant='body2' color={Text.secondary}>
               <div className="listProductPrice">
-                ${productData.price}
+                {<CurrencyFormat
+                  value={productData.price}
+                  displayType='text'
+                  thousandSeparator={true}
+                  prefix={'£'}
+                />}
               </div>
             </Typography>
           </div>
