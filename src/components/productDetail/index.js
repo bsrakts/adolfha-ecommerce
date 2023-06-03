@@ -30,7 +30,7 @@ const ProductDetail = ({ product }) => {
                 $ {product.price}
               </div>
             </Typography>
-            <AddToBasket/>
+            <AddToBasket item={product}/>
           </div>
         </CardContent>
      </Card>

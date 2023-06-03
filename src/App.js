@@ -3,9 +3,10 @@ import './App.css';
 import Navbar from './components/navbar';
 import { GlobalProvider } from './contexts/globalState';
 import { Home, ProductDetailPage } from './pages';
-import { DetailProvider } from './contexts/detail';
-import { CategoryProvider } from './contexts/category';
 import { CategoryPage } from './pages/categoryPage';
+import { DetailProvider } from './contexts/detailState';
+import { CategoryProvider } from './contexts/categoryState';
+import { BasketProvider } from './contexts/basketState';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <GlobalProvider>
       <DetailProvider>
         <CategoryProvider>
+          <BasketProvider>
             <Router>
             <Navbar />
             <div className="App">
@@ -23,6 +25,7 @@ function App() {
               </Routes>
               </div>
             </Router>
+            </BasketProvider>
         </CategoryProvider>
       </DetailProvider>
     </GlobalProvider>

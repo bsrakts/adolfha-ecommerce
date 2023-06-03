@@ -12,7 +12,6 @@ export const CategoryProvider = (props) => {
     try {
      const response = await axios.get(`https://fakestoreapi.com/products/categories`);
       setCategoryName(response.data)
-      console.log(response, "name")
     } catch (error) {
       console.log("error: product data")
     }
@@ -26,7 +25,6 @@ export const CategoryProvider = (props) => {
     try {
      const response = await axios.get(`https://fakestoreapi.com/products/category/${text}`);
       setCategoryProduct(response.data)
-      console.log(response)
     } catch (error) {
       console.log("error: product data")
     }

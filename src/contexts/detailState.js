@@ -11,7 +11,6 @@ export const DetailProvider = (props) => {
     try {
      const response = await axios.get(`https://fakestoreapi.com/products/${id}`);
       setDetail(response.data)
-      console.log(response)
     } catch (error) {
       console.log("error: product data")
     }

@@ -1,13 +1,12 @@
 /* eslint-disable array-callback-return */
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useContext, useState } from 'react'
-import { GlobalState } from '../../contexts/globalState';
+import React, { useContext } from 'react'
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 import { FormControl, Grid, InputLabel, MenuItem, Select, Typography } from '@mui/material';
 import './style.css'
 import ProductCard from '../productCard';
 import { Link } from 'react-router-dom';
-import { CategoryState } from '../../contexts/category';
+import { CategoryState } from '../../contexts/categoryState';
 
 
 const ProductList = ({ product }) => {

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
-import { CategoryState } from '../contexts/category';
 import ProductList from '../components/productList';
+import { CategoryState } from '../contexts/categoryState';
 
 export const CategoryPage = () => {
   

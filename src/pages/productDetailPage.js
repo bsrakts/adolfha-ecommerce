@@ -1,7 +1,7 @@
 import React, { useContext, useEffect} from 'react'
 import ProductDetail from '../components/productDetail'
 import { useParams } from 'react-router-dom'
-import { DetailState } from '../contexts/detail'
+import { DetailState } from '../contexts/detailState'
 
 export const ProductDetailPage = () => {
 
@@ -16,7 +16,6 @@ export const ProductDetailPage = () => {
 
   return (
     <div>
-      {console.log(detail)}
       <ProductDetail
         product={detail} />
     </div>

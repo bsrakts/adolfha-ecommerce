@@ -22,8 +22,6 @@ export const GlobalProvider = ({ children }) => {
     fetchProductsData()
   }, [dataLoading]);
 
-  console.log(products, "products")
-
   return (
     <GlobalState.Provider value={products}>
     {children}

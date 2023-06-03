@@ -1,12 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React  from 'react'
+import React, { useContext }  from 'react'
 import { AppBar, Button, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
 import { Menu as MenuIcon,LocalMall as LocalMallIcon } from '@mui/icons-material';
 import PopupState, { bindMenu, bindTrigger } from 'material-ui-popup-state';
 import './style.css'
-import { NavLink } from 'react-router-dom';
+import {NavLink, useNavigate } from 'react-router-dom';
+import { BasketContext } from '../../contexts/basketState';
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+
+  const { basketProductCount } = useContext(BasketContext)
 
   const logo = (
     <Typography color={'white'} noWrap>
@@ -29,7 +34,8 @@ const Navbar = () => {
           Jevelery
         </NavLink>
         <NavLink className="navTitle" variant='icon'>
-          <LocalMallIcon />
+        <LocalMallIcon />
+        {basketProductCount > 0 && <span className='basketCount'>{basketProductCount}</span>}
         </NavLink>
     </>
   )
@@ -52,10 +58,13 @@ const Navbar = () => {
                     <MenuIcon />
                   </Button>
                   <Menu {...bindMenu(popupState)}>
-                    <MenuItem onClick={popupState.close}>Woman</MenuItem>
-                    <MenuItem onClick={popupState.close}>Man</MenuItem>
-                    <MenuItem onClick={popupState.close}>Children</MenuItem>
-                    <MenuItem onClick={popupState.close} style={{"border-top" : "1px solid #18181c"}}><LocalMallIcon /> Basket</MenuItem> 
+                      <MenuItem onClick={() => navigate('/category/men\'s clothing')}>
+                        Men
+                      </MenuItem>
+                    <MenuItem onClick={() => navigate('/category/women\'s clothing')}>Women</MenuItem>
+                      <MenuItem onClick={() => navigate('/category/electronics')}>Electronics</MenuItem>
+                      <MenuItem onClick={() => navigate('/category/jewelery')}>Jevelery</MenuItem>
+                    <MenuItem style={{"border-top" : "1px solid #18181c"}}><LocalMallIcon /> Basket</MenuItem> 
                   </Menu>
                 </React.Fragment>
               )}

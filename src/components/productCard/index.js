@@ -44,7 +44,7 @@ const ProductCard = ({ productData }) => {
               </div>
             </Typography>
             </div>
-           <AddToBasket/>
+            <Button className='discoverButton'>Discover Now</Button>
           </div>
         </CardContent>
       </Card>
