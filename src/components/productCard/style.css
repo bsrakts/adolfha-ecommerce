@@ -20,15 +20,31 @@
   height:140px;
 }
 
+.cardBottom{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   border-top: 1px solid #18181c;
+   margin: 3rem 0rem;
+}
+
 .cardInfo{
   width: 100%;
-  margin-top: 4rem;
-  height: 5rem;
+  height:50px;
   display:flex;
+  margin: 0.5rem 0rem;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #18181c;
+}
+
+.basketButton{
+  display: flex;
+  height: 100%;
+  margin-bottom: auto;
+  background-color: rgb(255, 200, 0) !important;
+  color:#18181c !important;
+  font-weight: 500 !important;
 }
 
 .listProductTitle{
@@ -50,6 +66,18 @@
   cursor:pointer;
 }
 
+.rateingStars{
+  margin-top: 0.5rem;
+   font-size: 10px !important;
+   color:#18181c !important;
+   display: flex;
+   justify-content:flex-end !important;
+   align-items: center;
+}
+
+.countText{
+  font-size:10px !important;
+}
 
 .badge{
   background-color: #18181c !important;
