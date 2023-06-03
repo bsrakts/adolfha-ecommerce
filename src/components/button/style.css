@@ -1,0 +1,9 @@
+.basketButton{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-bottom: auto;
+  background-color: rgb(255, 200, 0) !important;
+  color:#18181c !important;
+  font-weight: 500 !important;
+}

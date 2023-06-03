@@ -38,15 +38,6 @@
   align-items: center;
 }
 
-.basketButton{
-  display: flex;
-  height: 100%;
-  margin-bottom: auto;
-  background-color: rgb(255, 200, 0) !important;
-  color:#18181c !important;
-  font-weight: 500 !important;
-}
-
 .listProductTitle{
   text-align: left;
   width:70%

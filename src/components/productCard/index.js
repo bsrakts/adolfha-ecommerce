@@ -3,6 +3,7 @@ import React from 'react'
 import { Badge, Button, Card, CardContent, Rating, Typography } from '@mui/material'
 import './style.css'
 import CurrencyFormat from 'react-currency-format';
+import AddToBasket from '../button';
 
 const ProductCard = ({ productData }) => {
 
@@ -43,7 +44,7 @@ const ProductCard = ({ productData }) => {
               </div>
             </Typography>
             </div>
-            <Button className='basketButton'>Add To Basket</Button>
+           <AddToBasket/>
           </div>
         </CardContent>
       </Card>

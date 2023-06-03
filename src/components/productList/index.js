@@ -3,7 +3,7 @@
 import React, { useContext, useState } from 'react'
 import { GlobalState } from '../../contexts/globalState';
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
-import { FormControl, Grid, InputLabel, MenuItem, Select } from '@mui/material';
+import { FormControl, Grid, InputLabel, MenuItem, Select, Typography } from '@mui/material';
 import './style.css'
 import ProductCard from '../productCard';
 import { Link } from 'react-router-dom';
@@ -17,21 +17,23 @@ const ProductList = ({ product }) => {
   return (
     <div className='productList'>
       <div className='productCategory'>
-        <FormControl fullWidth>
+        <Typography>Category</Typography>
+        <FormControl fullWidth className='productCategoryForm'>
           <InputLabel variant="standard" htmlFor="uncontrolled-native">
-            Category
           </InputLabel>
           <Select
             defaultValue={'all'}
+            className='productCategoryInput'
           >
-            <Link to={`/`}>
-            <MenuItem value={'all'}>
+            <Link to={`/`} value={'all'}>
+            <MenuItem className='menuItemText'>
                 All
               </MenuItem>
               </Link>
             {categoryName.map((cName) => {
               return (
-                <MenuItem value={cName}>
+                <MenuItem className='menuItemText'
+                  value={cName}>
                 <Link to={`/category/${cName}`}>
                   {cName}
                 </Link>

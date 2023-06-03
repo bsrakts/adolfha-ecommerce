@@ -8,12 +8,43 @@
 
 .productCategory{
   margin:auto;
-  margin-right:4rem;
+  margin-right: 4.5rem;
+  margin-bottom: 1rem;
+  display:flex;
+  flex-direction: column;
+  width:13rem !important;
+  justify-content: start;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.productCategoryForm{
   display:flex;
   justify-content: start;
-  box-shadow: rgba(60, 64, 67, 0.1) 0px 1px 2px 0px, rgba(60, 64, 67, 0.05) 0px 1px 3px 1px;
-  border-radius: 5px;
-  padding: 5px;
+}
+
+.productCategoryInput{
+  max-height:36px !important;
+  font-size: 15px !important;
+}
+
+.productCategoryInput:active{
+ border:none !important
+}
+
+.menuItemText{
+  color: #18181c !important;
+}
+
+.menuItemText:focus,
+.menuItemText:hover{
+  background-color: rgb(255, 200, 0) !important;
+  transition: all .4s ease-in-out;
+  color: #18181c !important;
+}
+
+.menuItemText > a {
+  color: #18181c !important;
 }
 
 .productListGrid{

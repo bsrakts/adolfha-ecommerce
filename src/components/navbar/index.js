@@ -16,19 +16,19 @@ const Navbar = () => {
 
   const menuItems = (
     <>
-        <NavLink to="/category/men's clothing">
+        <NavLink className="navTitle" to="/category/men's clothing">
             Men
         </NavLink>
-        <NavLink to="/category/women's clothing">
+        <NavLink className="navTitle" to="/category/women's clothing">
           Women
         </NavLink>
-        <NavLink to="/category/electronics">
+        <NavLink className="navTitle" to="/category/electronics">
           Electronics
         </NavLink>
-        <NavLink to="/category/jewelery">
+        <NavLink className="navTitle" to="/category/jewelery">
           Jevelery
         </NavLink>
-        <NavLink variant='icon'>
+        <NavLink className="navTitle" variant='icon'>
           <LocalMallIcon />
         </NavLink>
     </>
