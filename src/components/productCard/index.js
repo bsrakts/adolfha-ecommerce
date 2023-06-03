@@ -26,7 +26,7 @@ const ProductCard = ({ productData }) => {
             </Typography>
           </div>
         </CardContent>
-     </Card>
+        </Card>
     </div>
   )
 }

@@ -3,10 +3,10 @@ import { createContext, useEffect, useState } from "react";
 
 export const GlobalState = createContext();
 
-export const GlobalProvider = (props) => {
+export const GlobalProvider = ({ children }) => {
+
   const [products, setProducts] = useState([]);
   const [dataLoading, setDataLoading] = useState(true);
-  
 
   const fetchProductsData = async () => {
     try {
@@ -20,13 +20,13 @@ export const GlobalProvider = (props) => {
 
   useEffect(() => {
     fetchProductsData()
-  }, []);
+  }, [dataLoading]);
 
   console.log(products, "products")
 
   return (
     <GlobalState.Provider value={products}>
-    {props.children}
+    {children}
   </GlobalState.Provider>
   )
 }

@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
-import { AppBar, Button, ButtonGroup, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
+import React  from 'react'
+import { AppBar, Button, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
 import { Menu as MenuIcon,LocalMall as LocalMallIcon } from '@mui/icons-material';
 import PopupState, { bindMenu, bindTrigger } from 'material-ui-popup-state';
 import './style.css'
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-
 
   const logo = (
     <Typography color={'white'} noWrap>
@@ -16,20 +16,21 @@ const Navbar = () => {
 
   const menuItems = (
     <>
-      <ButtonGroup>
-        <Button variant='Woman'>
-          Woman
-        </Button>
-        <Button variant='Man'>
-          Man
-        </Button>
-        <Button variant='Man'>
-          Children
-        </Button>
-        <Button variant='icon'>
+        <NavLink to="/category/men's clothing">
+            Men
+        </NavLink>
+        <NavLink to="/category/women's clothing">
+          Women
+        </NavLink>
+        <NavLink to="/category/electronics">
+          Electronics
+        </NavLink>
+        <NavLink to="/category/jewelery">
+          Jevelery
+        </NavLink>
+        <NavLink variant='icon'>
           <LocalMallIcon />
-        </Button>
-      </ButtonGroup>
+        </NavLink>
     </>
   )
 
