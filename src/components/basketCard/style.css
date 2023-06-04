@@ -1,0 +1,65 @@
+.basketCard{
+  display: flex;
+  width:800px;
+  position: relative;
+}
+
+.basketCardContent{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.basketBadge{
+  background-color: #18181c !important;
+  border-left:2px solid rgb(230, 190, 136);
+  border-bottom:2px solid rgb(168, 142, 108);
+  padding:10px 15px;
+  display: flex;
+  font-size: 13px;
+  font-weight: 600;
+  justify-content: center;
+  width:120px;
+  color:white !important;
+  position:absolute !important;
+  top:0;
+  right:0;
+}
+
+.basketCardContent{
+  display:flex;
+  max-height: 15rem;
+}
+
+.basketItemImage{
+  width:20%;
+  height:120px;
+  margin-right:3rem;
+}
+
+.basketItemImage img{
+  object-fit: contain;
+  height: 120px;
+}
+
+.basketItemInfo{
+  display: flex;
+  width:100%;
+  flex-direction: column;
+}
+
+.basketItemPrice{
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 200, 0);
+  margin-top: 1rem !important;
+}
+
+.basketItemCount{
+  display: flex;
+  align-items: center;
+}
+
+

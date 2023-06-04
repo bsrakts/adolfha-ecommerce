@@ -32,10 +32,16 @@ const BasketProvider = ({ children }) => {
     setBasketProductCount((prevCount) => prevCount + 1);
   };
 
-  const removeToBasket = (item) => {
-    setBasketProduct((prevItems) => prevItems.filter((prod) => prod.id !== item.id));
-    setBasketProductCount((prevCount) => prevCount - 1);
+  const removeToBasket = ({ basketItem, basketProductCount }) => {
+    if (basketProductCount > 1) {
+      setBasketProductCount((prevCount) => prevCount - 1)
+    } else {
+      setBasketProduct((prevItems) => prevItems.filter((prod) => prod.id !== basketItem.id));
+    setBasketProductCount((prevCount) => prevCount - basketProductCount);
+    }
   };
+
+
 
   const clearBasket = () => {
     setBasketProduct([]);

@@ -7,6 +7,7 @@ import { CategoryPage } from './pages/categoryPage';
 import { DetailProvider } from './contexts/detailState';
 import { CategoryProvider } from './contexts/categoryState';
 import { BasketProvider } from './contexts/basketState';
+import BasketPage from './pages/basketPage';
 
 function App() {
 
@@ -21,7 +22,8 @@ function App() {
               <Routes>
                 <Route path="/product/:id" element={<ProductDetailPage />} />
                 <Route path='/category/:name' element={<CategoryPage />} />
-                <Route index element={<Home />} />
+                  <Route index element={<Home />} />
+                  <Route path="/basket" element={<BasketPage />} />
               </Routes>
               </div>
             </Router>

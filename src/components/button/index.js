@@ -11,6 +11,7 @@ const AddToBasket = ({ item }) => {
     addToBasket(item)
     console.log("sdjkf",item)
   }
+  
   return (
     <div>
       <Button className='basketButton' onClick={() => handleAddToBasket(item)}>Add To Basket</Button>

@@ -33,7 +33,7 @@ const Navbar = () => {
         <NavLink className="navTitle" to="/category/jewelery">
           Jevelery
         </NavLink>
-        <NavLink className="navTitle" variant='icon'>
+        <NavLink className="navSepetIcon" to="/basket" variant='icon'>
         <LocalMallIcon />
         {basketProductCount > 0 && <span className='basketCount'>{basketProductCount}</span>}
         </NavLink>

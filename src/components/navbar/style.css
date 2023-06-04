@@ -15,6 +15,11 @@
   transition: all .4s ease-in-out;
 }
 
+.navSepetIcon{
+  padding:0 1rem;
+  color:white;
+}
+
 .basketCount{
   position: absolute;
   bottom: 15px;
