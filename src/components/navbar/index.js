@@ -6,6 +6,7 @@ import PopupState, { bindMenu, bindTrigger } from 'material-ui-popup-state';
 import './style.css'
 import {NavLink, useNavigate } from 'react-router-dom';
 import { BasketContext } from '../../contexts/basketState';
+import { amber } from '@mui/material/colors';
 
 const Navbar = () => {
 
@@ -14,13 +15,16 @@ const Navbar = () => {
   const { basketProductCount } = useContext(BasketContext)
 
   const logo = (
-    <Typography color={'white'} noWrap>
-      Adolfha E-commerce
+    <Typography color={amber['A400']} fontWeight={600} noWrap>
+      ADOLFHA & CO .
     </Typography>
   )
 
   const menuItems = (
     <>
+        <NavLink className="navTitle" to="/">
+           All
+        </NavLink>
         <NavLink className="navTitle" to="/category/men's clothing">
             Men
         </NavLink>
@@ -31,7 +35,7 @@ const Navbar = () => {
           Electronics
         </NavLink>
         <NavLink className="navTitle" to="/category/jewelery">
-          Jevelery
+          Jewelry
         </NavLink>
         <NavLink className="navSepetIcon" to="/basket" variant='icon'>
         <LocalMallIcon />
@@ -57,13 +61,16 @@ const Navbar = () => {
                   <Button variant='' {...bindTrigger(popupState)}>
                     <MenuIcon />
                   </Button>
-                  <Menu {...bindMenu(popupState)}>
+                    <Menu {...bindMenu(popupState)}>
+                      <MenuItem onClick={() => navigate('/')}>
+                        All
+                      </MenuItem>
                       <MenuItem onClick={() => navigate('/category/men\'s clothing')}>
                         Men
                       </MenuItem>
                     <MenuItem onClick={() => navigate('/category/women\'s clothing')}>Women</MenuItem>
                       <MenuItem onClick={() => navigate('/category/electronics')}>Electronics</MenuItem>
-                      <MenuItem onClick={() => navigate('/category/jewelery')}>Jevelery</MenuItem>
+                      <MenuItem onClick={() => navigate('/category/jewelery')}>Jewelry</MenuItem>
                       <MenuItem onClick={() => navigate('/basket')} style={{"border-top" : "1px solid #18181c"}}><LocalMallIcon /> Basket</MenuItem> 
                   </Menu>
                 </React.Fragment>

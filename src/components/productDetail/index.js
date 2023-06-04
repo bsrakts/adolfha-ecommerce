@@ -23,7 +23,7 @@ const ProductDetail = ({ product }) => {
            <CircleRounded/> {product.title}
             </Typography>
             <Typography className="detailProductDescription" fontSize={12} component="div">
-           {product.description}
+              {product.description}
             </Typography>
           <Typography variant='body2' fontSize={18}>
               <div className="detailProductPrice">
