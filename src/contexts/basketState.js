@@ -5,7 +5,6 @@ const BasketContext = createContext();
 const BasketProvider = ({ children }) => {
   const [basketProduct, setBasketProduct] = useState([]);
   const [basketProductCount, setBasketProductCount] = useState(0);
-  const [basketItemCount, setBasketItemCount] = useState(1);
 
   useEffect(() => {
     const storedItems = localStorage.getItem('basketProduct');

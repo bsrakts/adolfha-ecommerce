@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
-import { Badge, Card, CardContent, Rating, Typography } from '@mui/material'
+import { Badge, Card, CardContent, Typography } from '@mui/material'
 import './style.css'
 import { CircleRounded } from '@mui/icons-material'
 import AddToBasket from '../button'
