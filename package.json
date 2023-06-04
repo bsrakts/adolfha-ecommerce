@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
     "i": "^0.3.7",
+    "material-ui-colors": "^1.0.0",
     "material-ui-popup-state": "^5.0.9",
     "npm": "^9.6.7",
     "react": "^18.2.0",

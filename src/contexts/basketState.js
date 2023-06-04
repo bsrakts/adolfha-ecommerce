@@ -5,6 +5,7 @@ const BasketContext = createContext();
 const BasketProvider = ({ children }) => {
   const [basketProduct, setBasketProduct] = useState([]);
   const [basketProductCount, setBasketProductCount] = useState(0);
+  const [basketItemCount, setBasketItemCount] = useState(1);
 
   useEffect(() => {
     const storedItems = localStorage.getItem('basketProduct');
@@ -32,15 +33,16 @@ const BasketProvider = ({ children }) => {
     setBasketProductCount((prevCount) => prevCount + 1);
   };
 
-  const removeToBasket = ({ basketItem, basketProductCount }) => {
-    if (basketProductCount > 1) {
-      setBasketProductCount((prevCount) => prevCount - 1)
-    } else {
-      setBasketProduct((prevItems) => prevItems.filter((prod) => prod.id !== basketItem.id));
-    setBasketProductCount((prevCount) => prevCount - basketProductCount);
+ const removeToBasket = (basketItem) => {
+   const itemIndex = basketProduct.findIndex((item) => item.id === basketItem.id);
+
+    if (itemIndex !== -1) {
+      const updatedBasket = [...basketProduct];
+      updatedBasket.splice(itemIndex, 1);
+      setBasketProduct(updatedBasket);
+      setBasketProductCount((prevCount) => prevCount - 1);
     }
   };
-
 
 
   const clearBasket = () => {

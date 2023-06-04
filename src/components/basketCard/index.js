@@ -8,9 +8,13 @@ const BasketCard = ({ basketItem, basketProductCount }) => {
   
   const { addToBasket, removeToBasket } = useContext(BasketContext);
 
-  const handleRemoveToBasket = (basketItem) => {
-    removeToBasket(basketItem)
-  }
+  const handleRemoveToBasket = () => {
+    removeToBasket(basketItem);
+  };
+
+  const handleAddToBasket = () => {
+    addToBasket(basketItem);
+  };
 
   return (
     <div>
@@ -29,11 +33,14 @@ const BasketCard = ({ basketItem, basketProductCount }) => {
             <Typography fontSize={18} className='basketItemPrice'>£ {basketItem.price}</Typography>
             <div className='basketItemCount'>
               <IconButton onClick={() => handleRemoveToBasket({ basketItem, basketProductCount })}>
-                <RemoveCircleOutlineSharp fontSize='16' />
+                <RemoveCircleOutlineSharp fontSize='12' />
               </IconButton>
-              <Typography style={{ margin: "1.2rem" }}>{basketProductCount}
+              <Typography style={{ margin: "1.2rem" }}>
+                 {basketProductCount}
                 </Typography>
-              <AddCircleOutlineSharp fontSize='16'/>
+              <IconButton onClick={() => handleAddToBasket({ basketItem, basketProductCount })}>
+                <AddCircleOutlineSharp fontSize='16'/>
+              </IconButton>
             </div>
           </div>
         </CardContent>
