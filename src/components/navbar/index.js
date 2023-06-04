@@ -64,7 +64,7 @@ const Navbar = () => {
                     <MenuItem onClick={() => navigate('/category/women\'s clothing')}>Women</MenuItem>
                       <MenuItem onClick={() => navigate('/category/electronics')}>Electronics</MenuItem>
                       <MenuItem onClick={() => navigate('/category/jewelery')}>Jevelery</MenuItem>
-                    <MenuItem style={{"border-top" : "1px solid #18181c"}}><LocalMallIcon /> Basket</MenuItem> 
+                      <MenuItem onClick={() => navigate('/basket')} style={{"border-top" : "1px solid #18181c"}}><LocalMallIcon /> Basket</MenuItem> 
                   </Menu>
                 </React.Fragment>
               )}

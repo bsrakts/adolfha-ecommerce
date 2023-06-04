@@ -1,10 +1,96 @@
-.basketList{
-  width: 100%;
+.noEmptyBasket{
+  display: flex !important;
+  justify-content: space-between;
+  padding:0 5rem;
+}
+
+.emptyBasket{
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
   margin: auto;
+  width: 50%;
 }
 
 .basketListItem{
   display:flex;
   width: 100%;
+  justify-content: center !important;
+}
+
+.costPrice{
+  width:40%;
+  padding:1rem 0rem;
+  margin-left:2rem;
+}
+
+.costPriceItem{
+  padding:1rem;
+  border-bottom: 1px solid #d8d8d8;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+
+.orderSummaryText{
+  white-space: nowrap; 
+  width: 12rem; 
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+}
+
+.totalPrice{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.totalPriceTitle{
+  color: rgb(255, 200, 0);
+  font-weight: 600;
+}
+
+.deleteAllButton{
+  color:red !important;
+  font-size:12px !important;
+}
+
+.deleteAllButton:hover{
+  background-color: transparent !important;
+}
+
+@media only screen and (max-width:1124px) {
+  .emptyBasket{
+  display: flex !important;
+  flex-direction: column;
   justify-content: center;
+  margin: auto;
+  width: 70%;
+}
+.noEmptyBasket{
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  padding:0 1rem;
+}
+
+.costPrice{
+  width:100%;
+  margin-left: 0;
+}
+
+.orderSummaryText{
+  width:50%;
+}
+
+.totalPrice{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.totalPriceTitle{
+  font-size:16px !important;
+}
 }

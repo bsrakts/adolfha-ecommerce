@@ -1,5 +1,4 @@
 .productDetailContainer{
-  position:relative;
   display: flex;
   justify-content: center;
   margin-top: 4rem;
@@ -9,6 +8,7 @@
 .productDetailCard{
   width:60rem;
   height: 100%;
+  position: relative;
 }
 
 .detailCard{
@@ -55,8 +55,8 @@
 @media only screen and (max-width:960px) {
 
   .productDetailCard{
-  max-width:20rem;
   height:auto;
+  margin: 0 1rem;
   }
 
   .detailCard{
@@ -65,7 +65,7 @@
   justify-content: center;
   align-items: center;
   align-content: space-between;
-  margin: 3rem 2rem;
+  margin: 2rem 1rem !important;
 }
 
 .detailCardInfo{
@@ -73,5 +73,10 @@
   justify-content: end;
   flex-direction: column;
   width: 100%;
+}
+
+.detailProductTitle{
+  margin-top:2rem !important;
+  font-size:1.2rem !important;
 }
 }

@@ -27,7 +27,7 @@ const ProductDetail = ({ product }) => {
             </Typography>
           <Typography variant='body2' fontSize={18}>
               <div className="detailProductPrice">
-                $ {product.price}
+                £ {product.price}
               </div>
             </Typography>
             <AddToBasket item={product}/>
