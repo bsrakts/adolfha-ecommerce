@@ -2,8 +2,6 @@
 import React from 'react'
 import { Badge, Button, Card, CardContent, Rating, Typography } from '@mui/material'
 import './style.css'
-import CurrencyFormat from 'react-currency-format';
-import AddToBasket from '../button';
 
 const ProductCard = ({ productData }) => {
 
@@ -35,12 +33,7 @@ const ProductCard = ({ productData }) => {
             </Typography>
             <Typography variant='body2' color={Text.secondary}>
               <div className="listProductPrice">
-                {<CurrencyFormat
-                  value={productData.price}
-                  displayType='text'
-                  thousandSeparator={true}
-                  prefix={'£'}
-                />}
+                £ {productData.price}
               </div>
             </Typography>
             </div>
