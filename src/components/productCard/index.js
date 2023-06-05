@@ -3,6 +3,8 @@ import React from 'react'
 import { Badge, Button, Card, CardContent, Rating, Typography } from '@mui/material'
 import './style.css'
 
+const {format} = require('number-currency-format')
+
 const ProductCard = ({ productData }) => {
 
   return (
@@ -32,8 +34,12 @@ const ProductCard = ({ productData }) => {
               {productData.title}
             </Typography>
             <Typography variant='body2' color={Text.secondary}>
-              <div className="listProductPrice">
-                £ {productData.price}
+                <div className="listProductPrice">
+                  {format(productData.price, {
+                    currency: '£',
+                    currencyPosition: 'LEFT',
+                    spacing: false,
+                  })}
               </div>
             </Typography>
             </div>

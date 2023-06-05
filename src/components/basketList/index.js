@@ -1,12 +1,14 @@
-import { Button, Card, IconButton, List, ListItem, ListItemText, Typography } from '@mui/material'
-import React, { useContext, useEffect } from 'react'
+import { Card, IconButton, List, ListItem, Typography } from '@mui/material'
+import React, { useContext } from 'react'
 import { BasketContext } from '../../contexts/basketState'
 import BasketCard from '../basketCard'
 import { red } from '@mui/material/colors'
 import { Link } from 'react-router-dom'
-import { amber, yellow } from 'material-ui-colors'
+import { amber } from 'material-ui-colors'
 import { Delete, Devices, Diamond, Man, ShoppingBagSharp, Woman } from '@mui/icons-material'
 import './style.css'
+
+const {format} = require('number-currency-format')
 
 const BasketList = () => {
 
@@ -70,7 +72,11 @@ const BasketList = () => {
                     {item.title}
                   </Typography>
                   <Typography fontSize={14}>
-                    {count} items = £ {count * item.price}
+                    {count} items = {format(count * item.price, {
+                      currency: '£',
+                      currencyPosition: 'LEFT',
+                      spacing: false,
+                    })}
                   </Typography>
                 </ListItem>
               ))}
@@ -79,8 +85,8 @@ const BasketList = () => {
                   <IconButton
                     className='deleteAllButton'
                     onClick={() => handleClearAllBasket()}>
-                    <Delete fontSize='20'/> Delete All Basket
-                    </IconButton>
+                    <Delete fontSize='20' /> Delete All Basket
+                  </IconButton>
                   <div>
                     <span className='totalPriceTitle'>Total Price: </span> £ {Object.values(uniqueItems).reduce((total, { item, count }) => total + (count * item.price), 0)}
                   </div>
