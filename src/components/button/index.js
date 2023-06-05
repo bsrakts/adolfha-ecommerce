@@ -9,7 +9,6 @@ const AddToBasket = ({ item }) => {
 
   const handleAddToBasket = (item) => {
     addToBasket(item)
-    console.log("sdjkf",item)
   }
   
   return (
